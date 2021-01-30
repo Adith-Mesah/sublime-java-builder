@@ -1,0 +1,7 @@
+{
+    "cmd": ["start","builder.py","$file_base_name","autorun"],
+    "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+    "selector": "source.java",
+    "shell": true
+    
+}
