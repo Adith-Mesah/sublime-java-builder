@@ -21,7 +21,7 @@ def compile(file_name,package):
 		print("=======================================")
 		# before we compile the file we check if the compiled-version of the java program is 
 		# already exist or not if it is then we will delete this file, by doing this we can
-		# check if the if compilation is success by check if the compiled-version of the java file
+		# check if the compilation is success by check if the compiled-version of the java file
 		# exist after compilation or not, if there is then we can determine that the compilation
 		# is a success
 		for file in os.listdir(asPath(package)):
@@ -74,10 +74,10 @@ def main():
 	file_package = None
 	cur_line = ""
 
-	# parse the the java file as the lines and look for the string 'package'
+	# parse the the java file as lines and look for the string 'package'
 	# then call the remove_unc to remove unnecessary characters in the line of where the package
 	# string found and if not found then the file_package will keep None which will be processed 
-	# by the compile function and will used by in the launching
+	# by the compile function and will used by in the compilation and launching
 	with open(argv[1]+".java",'r') as unit:
 		while True: 
 			cur_line = unit.readline()
@@ -89,7 +89,7 @@ def main():
 	compstat = compile(argv[1],file_package)
 	print("=======================================")
 
-	# the launching phase by checking the status returned by the compile function
+	# the launching phase. by checking the status returned by the compile function
 	# we can determine wether the program is compiled successfuly or not
 	# then we can launch or not launching to program based on the status
 	if compstat:
