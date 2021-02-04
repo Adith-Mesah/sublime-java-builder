@@ -5,8 +5,8 @@ note: omit the java extension when passing the file_name argument.
 note: your python interpreter need to have support to run python script without using the python command, but if you still need to pass the python command then you could try to modify the builder.py and increment all the argv indices by 1 
 
 usage:
-build.py file_name_no_extension autorun autoclear, except if you want to use autoclear you would have to pass the autorun(first)
+build.py file_name_no_extension autorun autoclear
 
-note: autorun and autoclear is optional
+note: autorun and autoclear is optional, except if you want to use autoclear you would have to pass the autorun(first)
 
 you can email me at: adithxd@gmail.com
